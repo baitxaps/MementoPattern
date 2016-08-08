@@ -11,7 +11,8 @@
 @interface Memento : NSObject
 
 @property (nonatomic,strong)NSString *state;
+@property (nonatomic,strong)NSDictionary *map;
 
 - (instancetype)initWithState:(NSString *)state;
-
+- (instancetype)initWithHashMap:(NSDictionary *)map ;
 @end

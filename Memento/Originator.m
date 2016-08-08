@@ -8,34 +8,49 @@
 
 #import "Originator.h"
 #import "Memento.h"
+#import "BeanUtils.h"
 
 @interface Originator ()
 @property (nonatomic,strong)Originator *backup;
+@property (nonatomic,strong)BeanUtils *utils;
 @end
 
 @implementation Originator
 
-- (void)createMemento {
-    self.backup = [self copy];
+- (instancetype)init {
+    if (self = [super init]) {
+        _utils = [BeanUtils new];
+    }
+    
+    return self;
+}
+
+
+- (Memento *)createMemento {
+//  self.backup = [self copy];
+    
+    Memento *memento = [[Memento alloc]initWithHashMap:[_utils backupProp:self]];
+    return memento;
 }
 
 
 - (void)restoreMemoto {
-   self.state = self.backup.state;
+   self.state1 = self.backup.state1;
 }
 
 - (void)restoreMemoto:(Memento *)memento {
-   // self.state = memento.state;
-    self.state = self.backup.state;
+    [_utils restoreProp:self hashMap:memento.map];
 }
 
 - (void)parametersCopyOperationWithBaseCopyObject:(Originator *)baseCopyObject {
     
-    baseCopyObject.state  = self.state;
+    baseCopyObject.state1  = self.state1;
 
     // 字典与数组的深层次拷贝
- //   baseCopyObject.datas      = [[[self.datas class] alloc] initWithArray:self.datas copyItems:YES];
- //   baseCopyObject.infomation = [[[self.infomation class] alloc] initWithDictionary:self.infomation copyItems:YES];
+    /*
+    baseCopyObject.datas      = [[[self.datas class] alloc] initWithArray:self.datas copyItems:YES];
+    baseCopyObject.infomation = [[[self.infomation class] alloc] initWithDictionary:self.infomation copyItems:YES];
+     */
 }
 
 @end

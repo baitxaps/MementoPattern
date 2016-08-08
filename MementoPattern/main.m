@@ -14,8 +14,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        // 1
         Boy *boy = [Boy new];
-        
         // 声明出备忘录的管理者
         Caretaker *caretaker = [Caretaker new];
         boy.state = @"心情很棒";
@@ -35,21 +35,20 @@ int main(int argc, const char * argv[]) {
         // 2
         // 定义发起人
         Originator *originator = [Originator new];
-        originator.state = @"初始状态";
-        
-        NSLog(@"初始状态是:%@",originator.state);
-        //创建备份
-        [originator createMemento];
-        originator.state = @"修改后的状态...";
-        NSLog(@"修改后状态是:%@",originator.state);
-        
-        /*[taker setMemento:[originator createMemento]];
-         [originator restoreMemoto:taker.memento];
-         */
+        Caretaker *taker = [Caretaker new];
+        originator.state1 = @"中国";
+        originator.state2 = @"强盛";
+        originator.state3 = @"繁荣";
+        NSLog(@"初始状态是:%@",originator);
+        //创建一个备忘录
+        [taker setMemento:[originator createMemento]];
+        originator.state1 = @"软件";
+        originator.state2 = @"架构";
+        originator.state3 = @"优秀";
+        NSLog(@"修改后状态是:%@",originator);
         // 恢复一个备忘录
-        
-        [originator restoreMemoto];
-        NSLog(@"恢复后状态是:%@",originator.state);
+        [originator restoreMemoto:taker.memento];
+        NSLog(@"恢复后状态是:%@",originator);
         
         
     }

@@ -20,4 +20,12 @@
     return self;
 }
 
+- (instancetype)initWithHashMap:(NSDictionary *)map {
+    if (self = [super init]) {
+        _map = map;
+    }
+    return self;
+}
+
+
 @end

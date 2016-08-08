@@ -12,9 +12,12 @@
 
 @interface Originator : Cloneable
 
-@property (nonatomic,strong)NSString *state;
+@property (nonatomic,strong)NSString *state1;
+@property (nonatomic,strong)NSString *state2;
+@property (nonatomic,strong)NSString *state3;
 
-- (void)createMemento ;
-//- (void)restoreMemoto:(Memento *)memento ;
+- (Memento *)createMemento;
 - (void)restoreMemoto;
+- (void)restoreMemoto:(Memento *)memento ;
+
 @end

@@ -13,6 +13,8 @@
 		774FCD5D1D56222C00ECE1CD /* Caretaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 774FCD5C1D56222C00ECE1CD /* Caretaker.m */; };
 		774FCD621D5629C300ECE1CD /* Originator.m in Sources */ = {isa = PBXBuildFile; fileRef = 774FCD611D5629C300ECE1CD /* Originator.m */; };
 		778CE9A41D58A604001FAF2C /* Cloneable.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CE9A31D58A604001FAF2C /* Cloneable.m */; };
+		778CE9A81D58D514001FAF2C /* BeanUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CE9A71D58D514001FAF2C /* BeanUtils.m */; };
+		778CE9AD1D58F17C001FAF2C /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CE9AC1D58F17C001FAF2C /* NSArray+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,11 @@
 		774FCD611D5629C300ECE1CD /* Originator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Originator.m; sourceTree = "<group>"; };
 		778CE9A21D58A604001FAF2C /* Cloneable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cloneable.h; sourceTree = "<group>"; };
 		778CE9A31D58A604001FAF2C /* Cloneable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cloneable.m; sourceTree = "<group>"; };
+		778CE9A51D58D466001FAF2C /* mementoPattern001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mementoPattern001.png; sourceTree = "<group>"; };
+		778CE9A61D58D514001FAF2C /* BeanUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeanUtils.h; sourceTree = "<group>"; };
+		778CE9A71D58D514001FAF2C /* BeanUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeanUtils.m; sourceTree = "<group>"; };
+		778CE9AB1D58F17C001FAF2C /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		778CE9AC1D58F17C001FAF2C /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 		774FCD421D55D23900ECE1CD = {
 			isa = PBXGroup;
 			children = (
+				778CE9A91D58F137001FAF2C /* Others */,
 				774FCD5F1D5629A600ECE1CD /* Memento */,
 				774FCD4D1D55D23900ECE1CD /* MementoPattern */,
 				774FCD4C1D55D23900ECE1CD /* Products */,
@@ -89,12 +97,24 @@
 		774FCD5F1D5629A600ECE1CD /* Memento */ = {
 			isa = PBXGroup;
 			children = (
+				778CE9A51D58D466001FAF2C /* mementoPattern001.png */,
 				774FCD601D5629C300ECE1CD /* Originator.h */,
 				774FCD611D5629C300ECE1CD /* Originator.m */,
 				778CE9A21D58A604001FAF2C /* Cloneable.h */,
 				778CE9A31D58A604001FAF2C /* Cloneable.m */,
+				778CE9A61D58D514001FAF2C /* BeanUtils.h */,
+				778CE9A71D58D514001FAF2C /* BeanUtils.m */,
 			);
 			path = Memento;
+			sourceTree = "<group>";
+		};
+		778CE9A91D58F137001FAF2C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				778CE9AB1D58F17C001FAF2C /* NSArray+Extension.h */,
+				778CE9AC1D58F17C001FAF2C /* NSArray+Extension.m */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +178,8 @@
 				774FCD571D55D7F500ECE1CD /* Boy.m in Sources */,
 				774FCD5A1D55E08E00ECE1CD /* Memento.m in Sources */,
 				774FCD4F1D55D23900ECE1CD /* main.m in Sources */,
+				778CE9A81D58D514001FAF2C /* BeanUtils.m in Sources */,
+				778CE9AD1D58F17C001FAF2C /* NSArray+Extension.m in Sources */,
 				778CE9A41D58A604001FAF2C /* Cloneable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,7 @@
 #import "Caretaker.h"
 #import "Memento.h"
 
-@interface Caretaker ()
-//@property (nonatomic,strong)Memento *memento;
-@end
+@interface Caretaker () @end
 
 @implementation Caretaker
 
